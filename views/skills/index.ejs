@@ -7,7 +7,7 @@
   <title>Animal Training Skills</title>
 </head>
 <body>
-  <h1>Animal Training Skills</h1>
+  <h1>Animal Training Behaviors</h1>
   <ul>
     <% skills.forEach(skill => { %>
       <li>
@@ -15,10 +15,13 @@
 				- 
 				<%= skill.level %>
         - 
-        <%= skill.behavior %>
+        <a href="/skills/<%= skill._id %> "><%= skill.behavior %></a>
 			</li>
     <% }) %>
-    <img src="https://attractionsmagazine.com/wp-content/uploads/2022/12/Baby-gorilla-at-Disneys-Animal-Kingdom-620x349.webp" alt="Gorilla baby Grace eating leaf">
   </ul>
+  <a href="/skills/new">Add Training Behavior</a>
+  </br>
+  </br>
+  <img src="assets/Grace.jpeg" alt="Gorilla baby Grace eating leaf">
 </body>
 </html>
