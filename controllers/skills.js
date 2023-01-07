@@ -1,11 +1,3 @@
-// import { skills } from '../data/skill-data.js'
-
-// function index(req, res) {
-//   res.render('skills/index', {
-//     skills: skills
-//   })
-// }
-
 import { Skill } from '../models/skill.js'
 
 function index(req, res) {
@@ -13,6 +5,7 @@ function index(req, res) {
   .then(skills => {
     res.render('skills/index', {
       skills: skills,
+      time: req.time,
     })
   })
   .catch(error => {
@@ -40,6 +33,31 @@ function show(req, res){
   Skill.findById(req.params.id)
   .then(skill => {
     res.render('skills/show', {
+      skill: skill,
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/skills')
+  })
+}
+
+function deleteTodo(req, res){
+  Skill.findByIdAndDelete(req.params.id)
+  .then(skill => {
+    res.redirect('/skills')
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/skills')
+  })
+}
+
+function edit(req, res){
+  console.log('EDIT CLICK!')
+  Skill.findById(req.params.id)
+  .then(skill => {
+    res.render('skills/edit', {
       skill: skill
     })
   })
@@ -54,4 +72,6 @@ export {
   newSkill as new,
   create,
   show,
+  deleteTodo as delete,
+  edit,
 }

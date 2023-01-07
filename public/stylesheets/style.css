@@ -6,3 +6,24 @@ body {
 a {
   color: #00B7FF;
 }
+
+h1 {
+  margin-top: 0px;
+}
+
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+	
+.delete-form button {
+  color: white;
+  font-size: 12px;
+  background-color: #55cbf9;
+  border: 1px solid rgb(71, 71, 71);
+}
+	
+li {
+  list-style: none;
+  margin-bottom: 6px;
+}

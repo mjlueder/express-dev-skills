@@ -8,15 +8,15 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>New Behavior</h1>
-  <form action="/skills" method="POST" autocomplete="off">
+  <h1>Edit Behavior</h1>
+  <form action="/skills/<%= skill._id %>?_method=PUT" method="POST" autocomplete="off">
     <p>Behavior:</p>
-    <input type="text" name="behavior">
+    <input type="text" name="behavior" value="<%= skill.behavior %>">
     <p>Skill Level:</p>
-    <input type="text" name="level">
+    <input type="text" name="level" value="<%= skill.level %>">
     <p>Species:</p>
-    <input type="text" name="species">
-    <button type="submit">Save Behavior</button>
+    <input type="text" name="species" value="<%= skill.species %>">
+    <button type="submit">Update Behavior</button>
   </form>
 </body>
 </html>

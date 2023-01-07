@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
   <title>Document</title>
 </head>
 <body>
@@ -11,6 +12,8 @@
   <h2><%= skill.species %></h2>
   <h3>Skill Level: <%= skill.level %></h3>
   <h3>Training Behavior: <%= skill.behavior %></h3>
+  <a href="/skills/<%= skill._id %>/edit">Edit Behavior</a>
+  </br>
   <a href="/skills">Back</a>
 </body>
 </html>
