@@ -11,6 +11,10 @@ h1 {
   margin-top: 0px;
 }
 
+ul{
+  padding-left: 20px;
+}
+
 .delete-form {
   display: inline-block;
   margin-right: 10px;

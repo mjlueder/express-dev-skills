@@ -9,6 +9,7 @@
 </head>
 <body>
   <h1>Edit Behavior</h1>
+  <a href="/skills">Cancel</a>
   <form action="/skills/<%= skill._id %>?_method=PUT" method="POST" autocomplete="off">
     <p>Behavior:</p>
     <input type="text" name="behavior" value="<%= skill.behavior %>">
